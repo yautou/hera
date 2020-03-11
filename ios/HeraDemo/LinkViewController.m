@@ -25,10 +25,11 @@
 //
 
 #import "LinkViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface LinkViewController ()
 
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
@@ -37,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	_webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+	_webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:_webView];
 	
 	if (self.url) {
